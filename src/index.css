@@ -1,0 +1,417 @@
+@import url('https://fonts.googleapis.com/css2?family=Quicksand:wght@300;400;500;600;700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Rubik+Wet+Paint:wght@300;400;500;600;700&display=swap');
+
+:root{
+  /* FONT FAMILY */
+  --fontFamily-Rubik: 'Rubik Wet Paint', system-ui;
+  --fontFamily-QuickSand: 'Open Sans', sans-serif;
+
+  /* BORDER COLOUR */
+  --border-blue-jeans: hsla(202, 100%, 50%, 1);
+  --border-white-alpha-10: hsla(0, 0%, 100%, 0.1);
+
+  /* OTHER */
+  --body-color-red: #F30101;
+  --bar-color-light: #FFF;
+  --bar-color-light-grey: #707380;
+  --yellow-dark-color-txt: #64F340 ;
+  --tertiary-color-dark-blue: #7977F5;
+  --non-color-dark: #8D8D8D;
+  --toggle-color: #DDD;
+  --text1-color-dark-grey: #000;
+  --border-color: 2px solid #64F340;
+  --box-shadow: rgba(0, 0, 0, 0.25) 0px 0.0625em 0.0625em, rgba(0, 0, 0, 0.25) 0px 0.125em 0.5em, rgba(255, 255, 255, 0.1) 0px 0px 0px 1px inset;;
+  --box-shadow-second: 0 .5rem 1rem rgba(0, 0, 0, .1);
+  --text-shadow: 0 1.5rem 3rem rgba(0, 0, 0, .3);
+
+  --tran-04: all 0.4s ease;
+  --tran-06: all 0.6s ease;
+  --tran-10: all 1.0s ease;
+}
+*, ::before, ::after{
+  margin: 0;
+  padding: 0;
+  box-sizing: 0;
+}
+*{
+  font-family: var(--fontFamily-QuickSand);
+  color: var(--bar-color-light);
+  margin: 0;
+  font-size: 20px;
+  line-height: 35px;
+  box-sizing: border-box;
+  font-weight: 400;
+}
+a{
+  text-decoration: none;
+  color: var(--text1-color-dark-grey);
+}
+i{
+  font-weight: 400;
+  color: var(--bar-color-light);
+  font-size: 28px;
+}
+img, span, button{
+  display: block;
+  cursor: pointer;
+}
+h1, h2, h3, h4, h5, h6{
+  font-family: var(--fontFamily-Rubik);
+  color: var(--bar-color-light);
+}
+h1, h2{
+  font-size: 45px;
+  text-align: center;
+  text-transform: uppercase;
+  text-shadow: var(--text-shadow);
+}h2{
+  margin-top: 1rem;
+  font-size: 45px;
+}h3{
+  font-size: 30px;
+}h4{
+  font-size: 27px;
+}h5{
+  font-size: 22px;
+}
+p{
+  text-align: center;
+}
+button{
+  background: var(--bar-color-light);
+  color: var(--text1-color-dark-grey);
+  border: var(--border-color);
+  padding: 2px 10px;
+  border-radius: 10px;
+  text-transform: uppercase;
+  transition: var(--tran-06);
+  box-shadow: var(--box-shadow);
+}
+button:hover{
+  transform: scale(0.89);
+  background: var(--bar-color-light);
+  color: var(--body-color-red);
+  border-color: #AB7171;
+}
+input, button, textarea{
+  font: inherit;
+}
+html{
+  font-family: var(--fontFamily-QuickSand);
+  font-size: 18px;
+  scroll-behavior: smooth;
+}
+html::-webkit-scrollbar{
+  width: 4px;
+}
+html::-webkit-scrollbar-track{
+  background: #f1f1f1;
+}
+html::-webkit-scrollbar-thumb{
+  background: #888;
+}
+html::-webkit-scrollbar-thumb:hover{
+  background: #555;
+}
+body{
+  /* background-image: url("");
+  background-repeat: repeat;
+  background-position: center;
+  background-size: 500px 500px; */
+  background: var(--bar-color-light-grey);
+  width: 100%;
+}
+.AllPage{
+  padding: 2.5rem 0 1rem 0;
+}
+.navBar{
+  display: flex;
+  align-items: center;
+  justify-content: space-evenly;
+  padding: 0.5rem 0;
+  position: fixed;
+  top: 0;
+  width: 100%;
+  z-index: 1; background: var(--bar-color-light-grey);
+  padding: 8px 0;
+  height: 80px;
+  box-shadow: var(--box-shadow);
+}
+.navBar span img{
+  width: 50px; height: 35px; background: transparent; border-radius: 10%;
+}
+.navBar ul{
+  display: flex;
+  list-style-type: none;
+  gap: 20px;
+  width: fit-content;
+  flex-wrap: wrap;
+}
+.navBar ul li{
+  cursor: pointer;
+  transition: var(--tran-06);
+  border: 5px solid transparent;
+  text-shadow: var(--text-shadow);
+}
+.navBar ul li:hover{
+  border-bottom-color: var(--non-color-dark);
+  transform: scale(0.9);
+}
+.navBar ul li h3{
+  font-family: var(--fontFamily-Rubik);
+}
+.navBar .menuBtn{
+  display: none;
+  pointer-events: none;
+}
+.AllPage{
+  margin-top: 4.1rem; 
+}
+/* .allSectiion :nth-child(1n){
+  background: red; margin: 2rem 0;
+} */
+.descriptionImg{
+  display: flex; align-items: center; 
+  justify-content: center; gap: 2rem;
+}
+.descriptionImg span h1{
+  line-height: 50px;
+}
+.descriptionImg span:first-child{
+  display: flex; justify-content: space-between; align-items: center; 
+  flex-direction: column; height: auto; gap: 2rem; width: 30%;
+}
+.descriptionImg span:last-child{
+  width: auto; display: block; pointer-events: all;
+}
+.descriptionImg span .logoImg1{
+  display: none; position: none; pointer-events: none;
+}
+.caSection{
+  display: flex; align-items: last baseline; justify-content: center;
+  gap: 2rem; margin: 2rem 0;
+}
+.caSection span:first-child{
+  border: 2px solid var(--yellow-dark-color-txt); padding: 2px 0.5rem; border-radius: 12px;
+}
+.caSection span:last-child{
+  border: 1px solid var(--yellow-dark-color-txt); padding: 2px; border-radius: 6px;
+}
+.caSection span:last-child img{
+  width: 40px; height: 40px;
+}
+.allSC-Btn{
+  display: flex; align-items: center; justify-content: center; gap: 5rem; margin: 2rem 0;
+}
+.allSC-Btn .allSocHandle{
+  display: flex; justify-content: center; align-items: center; gap: 10px;
+}
+.allSocHandle span {
+  border-radius: 12px; padding: 5px; border: 1px solid #64F340; transition: var(--tran-06);
+}
+.allSocHandle span:nth-child(1n):hover{
+  transform: scale(0.9); border-color: #54f12d;
+}
+.allSocHandle span img{
+  width: 40px; height: 40px;
+}
+.storySection{
+  display: block;
+}
+.storySection h3{
+  text-align: center; margin-top: 4rem;
+}
+.storySection div{
+  margin: 0 auto; display: flex; align-items: center; justify-content: center; margin-top: 2rem;
+  background: var(--bar-color-light); border-radius: 12px; border: 2px solid var(--yellow-dark-color-txt);
+  padding: 2rem 3rem; width: 95%; gap: 1.5rem;
+}
+.storySection div span img{
+  width: 300px; height: 300px; border-radius: 24px; border: 2px solid var(--non-color-dark);
+}
+.storySection div p{
+  width: 50%;
+  font-size: 15px; font-weight: bold; color: var(--text1-color-dark-grey);
+}
+.memeSection{
+  display: block;
+}
+.memeSection h3{
+  text-align: center; margin-top: 4rem;
+}
+.memeSection div{
+  display: flex; align-items: center; justify-content: center;
+  gap: 1.5rem; margin-top: 2rem;
+}
+.memeSection div span{
+  border: 5px solid var(--yellow-dark-color-txt); border-radius: 16px; 
+}
+.memeSection div span img{
+  width: 350px; height: 400px; border-radius: 16px; 
+  border: 2px solid var(--non-color-dark);
+}
+.footDown{
+  border-top: 1px solid var(--bar-color-light); padding: 0.8rem 0;
+}
+@media screen and (max-width: 830px){
+  *{
+    font-size: 17px;
+    line-height: 35px;
+  }
+  .descriptionImg span:first-child{
+    width: 80%;
+  }
+  .descriptionImg span .logoImg1{
+    display: block; position: relative; pointer-events: all;
+  }
+  .descriptionImg span:last-child{
+    display: none; pointer-events: none;
+  }
+  .caSection{
+    display: block; align-content: center;justify-self: center;
+  }
+  .caSection span:first-child{
+    width: fit-content;
+  }
+  .caSection span:last-child{
+    width: fit-content; float: inline-end; margin-top: 0.5rem; margin-right: -1.5rem;
+  }
+  .caSection span:nth-child(2) > img{
+    width: 25px; height: 25px; 
+  }
+  .allSC-Btn{
+    display: grid; align-items: center; justify-content: center; gap: 2rem; margin: 0;
+  }
+  .allSC-Btn button{
+    width: fit-content; margin: 0 auto;
+  }
+  .storySection div{
+    margin: 0 auto; display: flex; flex-direction: column; margin-top: 2rem;
+    padding: 2rem 1rem; width: 95%; gap: 1.5rem;
+  }
+  .storySection div span img{
+    width: 300px; height: 300px; 
+  }
+  .storySection div p{
+    width: auto;
+  }
+  .memeSection{
+    width: 100%; padding: 0 1rem;
+  }
+  .memeSection div{
+    gap: 0.5rem; margin-top: 2rem;
+  }
+  .memeSection div span{
+    width: 50%;
+  }
+  .memeSection div span img{
+    width: 100%; height: 200px; border-radius: 16px; 
+    border: 2px solid var(--non-color-dark);
+  }
+  .navBar{
+    justify-content: space-between;
+    padding: 8px 2rem 0 2rem;
+  }
+  .navBar ul{
+    display: none;
+    pointer-events: all;
+    position: absolute;
+    top: calc(100% + 1px);
+    right: 2px;
+    height: 200vh;
+    width: 320px;
+    padding: 1rem 2rem 0 2rem;
+    border-left: 1px solid white;
+    box-shadow: var(--box-shadow);
+    transition: var(--tran-06);
+    z-index: 2;
+    background: rgb(185, 157, 157);
+  }
+  .navBar ul li{
+    margin: 0.4rem 0;
+    text-align: center;
+    border-radius: 15px;
+    padding: 5px 0;
+    border: 2px solid transparent;
+  }
+  .navBar ul li:hover{
+    border-bottom-color: unset;
+    border-color: var(--bar-color-light);
+    border-width: 2px;
+  }
+  .navBar ul li h3{
+    text-align: center;
+  }
+  .navBar .menuOptionActive{
+    display: block;
+    pointer-events: all;
+  }
+  .navBar button{
+    display: none;
+    pointer-events: none;
+  }
+  .navBar .menuBtn{
+    display: block;
+    pointer-events: all;
+    width: 35px;
+    height: 5px;
+    background: var(--bar-color-light);
+    position: relative;
+    border-radius: 10px;
+    transition: var(--tran-06);
+  }
+  .navBar .menuBtn::before{
+    content: "";
+    width: 35px;
+    height: 5px;
+    background: var(--bar-color-light);
+    top: 10px;
+    position: absolute;
+    border-radius: 10px;
+    transition: var(--tran-06);
+  }
+  .navBar .menuBtn::after{
+    content: "";
+    width: 35px;
+    height: 5px;
+    background: var(--bar-color-light);
+    bottom: 10px;
+    position: absolute;
+    border-radius: 10px;
+    transition: var(--tran-06);
+  }
+  .navBar .menuBtnActive:nth-child(n){
+    background: transparent;
+  }
+  .navBar .menuBtnActive::before{
+    top: 0;
+    transform: rotate(135deg);
+  }
+  .navBar .menuBtnActive::after{
+    bottom: 0;
+    transform: rotate(-135deg);
+  }
+}
+@media screen and (max-width: 600px){
+  .caSection span:last-child{
+    margin-right: 1.5rem;
+  }
+  .logoImg1 img{
+    width: 300px; height: 200px;
+  }
+  .caSection{
+    width: 90%;
+  }
+  .caSection span:first-child{
+    width: 100%; overflow-x: hidden; padding: 2px auto;
+  }
+  .allSC-Btn{
+    gap: 1rem; margin: 0rem 0;
+ }
+ .allSC-Btn .allSocHandle{
+   gap: 5px;
+ }
+ .allSocHandle span img{
+   width: 30px; height: 30px;
+ }
+}
